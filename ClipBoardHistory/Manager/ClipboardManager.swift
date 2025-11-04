@@ -16,6 +16,7 @@ class ClipboardManager: ObservableObject {
     private var lastChangeCount = NSPasteboard.general.changeCount
     private var timer: Timer?
     private let maxItems = 10
+    private var ignoreNextChange = false
     
     init() {
         loadHistory()
@@ -34,11 +35,16 @@ class ClipboardManager: ObservableObject {
         guard pasteboard.changeCount != lastChangeCount else { return }
         lastChangeCount = pasteboard.changeCount
         
-        if let text = pasteboard.string(forType: .string),
-           !text.isEmpty {
+        if ignoreNextChange {
+            ignoreNextChange = false
+            return
+        }
+        
+        if let text = pasteboard.string(forType: .string), !text.isEmpty {
             addToHistory(text)
         }
     }
+    
     
     func addToHistory(_ text: String) {
         if history.first != text {
@@ -50,8 +56,15 @@ class ClipboardManager: ObservableObject {
     }
     
     func copyBack(_ text: String) {
+        ignoreNextChange = true
+        
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(text, forType: .string)
+
+        // Remove the selected item
+        if let index = history.firstIndex(of: text) {
+            history.remove(at: index)
+        }
     }
     
     func clearHistory() {
