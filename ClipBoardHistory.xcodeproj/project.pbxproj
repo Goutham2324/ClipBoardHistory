@@ -13,6 +13,8 @@
 		98DF59042EBA009500760313 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF59032EBA009500760313 /* StorageKeys.swift */; };
 		98DF59072EBA00C600760313 /* ClipboardMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF59062EBA00C600760313 /* ClipboardMenuView.swift */; };
 		98DF59092EBA0C3B00760313 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98DF59082EBA0C3B00760313 /* Info.plist */; };
+		98DF590C2EBA168700760313 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF590B2EBA168700760313 /* SettingsView.swift */; };
+		98DF590F2EBA173100760313 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 98DF590E2EBA173100760313 /* LaunchAtLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,7 @@
 		98DF59032EBA009500760313 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
 		98DF59062EBA00C600760313 /* ClipboardMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuView.swift; sourceTree = "<group>"; };
 		98DF59082EBA0C3B00760313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98DF590B2EBA168700760313 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98DF590F2EBA173100760313 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,7 @@
 		98DF59052EBA00B100760313 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				98DF590B2EBA168700760313 /* SettingsView.swift */,
 				98DF59062EBA00C600760313 /* ClipboardMenuView.swift */,
 			);
 			path = Views;
@@ -114,6 +119,7 @@
 			);
 			name = ClipBoardHistory;
 			packageProductDependencies = (
+				98DF590E2EBA173100760313 /* LaunchAtLogin */,
 			);
 			productName = ClipBoardHistory;
 			productReference = 98DF58EA2EB9FFCA00760313 /* Clipsy.app */;
@@ -143,6 +149,9 @@
 			);
 			mainGroup = 98DF58E12EB9FFCA00760313;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				98DF590D2EBA173100760313 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 98DF58EB2EB9FFCA00760313 /* Products */;
 			projectDirPath = "";
@@ -170,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98DF590C2EBA168700760313 /* SettingsView.swift in Sources */,
 				98DF59072EBA00C600760313 /* ClipboardMenuView.swift in Sources */,
 				98DF58FD2EBA000E00760313 /* ClipBoardHistoryApp.swift in Sources */,
 				98DF59042EBA009500760313 /* StorageKeys.swift in Sources */,
@@ -308,8 +318,17 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Clipsy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -342,8 +361,17 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Clipsy;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -388,6 +416,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		98DF590D2EBA173100760313 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		98DF590E2EBA173100760313 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98DF590D2EBA173100760313 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98DF58E22EB9FFCA00760313 /* Project object */;
 }

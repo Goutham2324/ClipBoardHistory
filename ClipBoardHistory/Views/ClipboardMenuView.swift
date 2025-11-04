@@ -39,6 +39,10 @@ struct ClipboardMenuView: View {
                 manager.clearHistory()
             }
             
+            SettingsLink {
+                Text("Settings…")
+            }
+            
             Button("Quit") {
                 NSApp.terminate(nil)
             }
