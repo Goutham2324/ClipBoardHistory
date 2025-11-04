@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		98DF58FC2EBA000E00760313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98DF58F82EBA000E00760313 /* Assets.xcassets */; };
+		98DF58FD2EBA000E00760313 /* ClipBoardHistoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF58F92EBA000E00760313 /* ClipBoardHistoryApp.swift */; };
+		98DF58FE2EBA000E00760313 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF58FA2EBA000E00760313 /* ContentView.swift */; };
+		98DF59012EBA003F00760313 /* ClipboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF59002EBA003F00760313 /* ClipboardManager.swift */; };
+		98DF59042EBA009500760313 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF59032EBA009500760313 /* StorageKeys.swift */; };
+		98DF59072EBA00C600760313 /* ClipboardMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF59062EBA00C600760313 /* ClipboardMenuView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		98DF58EA2EB9FFCA00760313 /* ClipBoardHistory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipBoardHistory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98DF58F82EBA000E00760313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98DF58F92EBA000E00760313 /* ClipBoardHistoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipBoardHistoryApp.swift; sourceTree = "<group>"; };
+		98DF58FA2EBA000E00760313 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		98DF59002EBA003F00760313 /* ClipboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManager.swift; sourceTree = "<group>"; };
+		98DF59032EBA009500760313 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
+		98DF59062EBA00C600760313 /* ClipboardMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		98DF58EC2EB9FFCA00760313 /* ClipBoardHistory */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ClipBoardHistory;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		98DF58E72EB9FFCA00760313 /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		98DF58E12EB9FFCA00760313 = {
 			isa = PBXGroup;
 			children = (
-				98DF58EC2EB9FFCA00760313 /* ClipBoardHistory */,
+				98DF58FB2EBA000E00760313 /* ClipBoardHistory */,
 				98DF58EB2EB9FFCA00760313 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,43 @@
 				98DF58EA2EB9FFCA00760313 /* ClipBoardHistory.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		98DF58FB2EBA000E00760313 /* ClipBoardHistory */ = {
+			isa = PBXGroup;
+			children = (
+				98DF59052EBA00B100760313 /* Views */,
+				98DF59022EBA007F00760313 /* Utils */,
+				98DF58FF2EBA001300760313 /* Manager */,
+				98DF58F82EBA000E00760313 /* Assets.xcassets */,
+				98DF58F92EBA000E00760313 /* ClipBoardHistoryApp.swift */,
+				98DF58FA2EBA000E00760313 /* ContentView.swift */,
+			);
+			path = ClipBoardHistory;
+			sourceTree = "<group>";
+		};
+		98DF58FF2EBA001300760313 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				98DF59002EBA003F00760313 /* ClipboardManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		98DF59022EBA007F00760313 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				98DF59032EBA009500760313 /* StorageKeys.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		98DF59052EBA00B100760313 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98DF59062EBA00C600760313 /* ClipboardMenuView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +103,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				98DF58EC2EB9FFCA00760313 /* ClipBoardHistory */,
 			);
 			name = ClipBoardHistory;
 			packageProductDependencies = (
@@ -109,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98DF58FC2EBA000E00760313 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98DF59072EBA00C600760313 /* ClipboardMenuView.swift in Sources */,
+				98DF58FD2EBA000E00760313 /* ClipBoardHistoryApp.swift in Sources */,
+				98DF59042EBA009500760313 /* StorageKeys.swift in Sources */,
+				98DF59012EBA003F00760313 /* ClipboardManager.swift in Sources */,
+				98DF58FE2EBA000E00760313 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,11 +302,14 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Clipsy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ClipBoardHistory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,11 +335,14 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Clipsy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ClipBoardHistory;
 				PRODUCT_NAME = "$(TARGET_NAME)";

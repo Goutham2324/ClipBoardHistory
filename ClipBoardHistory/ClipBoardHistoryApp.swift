@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ClipBoardHistoryApp: App {
+    @StateObject private var manager = ClipboardManager()
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra("ClipBoard", systemImage: "clipboard") {
+            ClipboardMenuView()
+                .environmentObject(manager)
         }
+        .menuBarExtraStyle(.window)
     }
 }
